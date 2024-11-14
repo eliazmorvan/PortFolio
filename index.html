@@ -1,62 +1,990 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio de Eliaz Morvan</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <!-- Section d'accueil -->
-  <header class="hero">
-    <h1>Eliaz Morvan</h1>
-    <p>Data Scientist passionné par l’analyse des données</p>
-  </header>
+<html lang="en">
 
-  <!-- Section À propos -->
-  <section id="about">
-    <h2>À propos</h2>
-    <p>Je suis un data scientist expérimenté...</p>
-  </section>
+    <head>
+        <meta charset="utf-8">
+        <title>Eliaz Morvan Portfolio</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="portfolio, Eliaz Morvan, Data Scientist, Machine Learning" name="keywords">
+        <meta content="Portfolio de Eliaz Morvan : expertise en data et IA. Projets innovants en science des données" name="description">
 
-  <!-- Section Projets -->
-  <section id="projects">
-    <h2>Projets</h2>
-    <div class="project">
-      <h3>Nom du Projet 1</h3>
-      <p>Description du projet...</p>
-      <a href="https://github.com/ton-projet">Voir sur GitHub</a>
-    </div>
-    <!-- Ajoute d'autres projets ici -->
-  </section>
 
-  <!-- Section Compétences -->
-  <section id="skills">
-    <h2>Compétences</h2>
-    <ul>
-      <li>Python</li>
-      <li>Machine Learning</li>
-      <li>Visualisation de données (Dash, Matplotlib)</li>
-    </ul>
-  </section>
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Edu+TAS+Beginner:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-  <!-- Section Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <form action="https://formspree.io/f/ton-form-id" method="POST">
-      <label for="name">Nom</label>
-      <input type="text" id="name" name="name" required>
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="lib/animate/animate.min.css"/>
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" required></textarea>
 
-      <button type="submit">Envoyer</button>
-    </form>
-  </section>
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
 
-  <script src="app.js"></script>
-</body>
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar Start -->
+        <div class="container-fluid nav-section border-0">
+            <nav class="navbar navbar-light">
+                <div class="navbar-nav flex-column">
+                    <a href="#pigraHome" class="nav-item nav-link active"><span class="fa fa-home"></span> Home</a>
+                    <a href="#pigraAbout" class="nav-item nav-link"><span class="far fa-address-card"></span> About</a>
+                    <a href="#pigraService" class="nav-item nav-link"><span class="fab fa-servicestack"></span> Service</a>
+                    <a href="#pigraBlog" class="nav-item nav-link"><span class="fa fa-blog"></span> Blog</a>
+                    <a href="#pigraContact" class="nav-item nav-link"><span class="fas fa-address-book"></span> Contact</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid" id="pigraHome">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-12 col-lg-3">
+                        <div class="header-content bg-dark h-100 pt-6 pe-6 pb-6">
+                            <a href="index.html" class="navbar-brand d-inline-flex pb-5 wow fadeInUp" data-wow-delay="0.1s">
+                                <h1 class="display-6 text-white mb-0">Pigra</h1>
+                            </a>
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.3s">
+                                <p class="text-white sub-title">👋 Bonjour, je suis Eliaz Morvan</p>
+                                <h1 class="display-6 text-white mb-0">Data Scientist basé à Bordeaux</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-9">
+                        <div class="header-img d-flex h-100 pt-6 ps-6 pb-6">
+                            <div class="row g-5">
+                                <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="bg-light p-4" style="border-radius: 68% 32% 100% 0% / 0% 75% 25% 100%;">
+                                        <img src="images/tete.jpg" class="img-fluid w-100" style="border-radius: 68% 32% 100% 0% / 0% 75% 25% 100%;" alt="Image">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.3s">
+                                    <h1 class="display-6 mb-4">Data Scientist, Ingénieur Machine Learning</h1>
+                                    <p class="mb-4">Bienvenue sur mon site ! Je m'appelle Eliaz Morvan, diplômé en Mathématiques Appliquées de l'INSA de Rennes, passionné par la science des données et l'intelligence artificielle. Fort d'expériences en data science et IA, j'accompagne les entreprises dans la création de solutions analytiques et d'outils de machine learning, alliant expertise technique et innovation.
+                                    </p>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                                        <p class="text-dark mb-0">6 rue Carbonneau, Bordeaux</p>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-envelope text-primary me-3"></i>
+                                        <p class="text-dark mb-0">eliazmorvan@orange.fr</p>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fa fa-phone-alt text-primary me-3"></i>
+                                        <p class="text-dark mb-0">(+33) 750642179</p>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-4">
+                                        <i class="fab fa-firefox-browser text-primary me-3"></i>
+                                        <p class="text-dark mb-0">www.eliazmorvan.com</p>
+                                    </div>
+                                    <div class="d-flex">
+                                        <a class="btn btn-primary btn-sm-square me-3" href="#"><i class="fab fa-facebook-f text-white"></i></a>
+                                        <a class="btn btn-primary btn-sm-square me-3" href="#"><i class="fab fa-twitter text-white"></i></a>
+                                        <a class="btn btn-primary btn-sm-square me-3" href="#"><i class="fab fa-instagram text-white"></i></a>
+                                        <a class="btn btn-primary btn-sm-square me-0" href="#"><i class="fab fa-linkedin-in text-white"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+        <!-- About Start -->
+        <div class="container-fluid" id="pigraAbout">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-12 col-lg-3">
+                        <div class="about-header bg-dark h-100 pt-6 pe-6 pb-6">
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                                <p class="text-white sub-title">A propos de moi</p>
+                                <h1 class="display-6 text-white mb-0">Data Scientist basé à Bordeaux, France depuis 2024</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-9">
+                        <div class="about-content h-100 pt-6 ps-6 pb-6">
+                            <div class="row g-5">
+                                <div class="col-xl-5">
+                                    <div class="about-img bg-light p-4 wow fadeInUp" data-wow-delay="0.1s">
+                                        <img src="img/about.jpg" class="img-fluid w-100" alt="Image">
+                                        <div class="sosial-icon">
+                                            <a class="btn btn-primary btn-sm-square mb-3" href="#"><i class="fab fa-facebook-f text-white"></i></a>
+                                            <a class="btn btn-primary btn-sm-square mb-3" href="#"><i class="fab fa-twitter text-white"></i></a>
+                                            <a class="btn btn-primary btn-sm-square mb-3" href="#"><i class="fab fa-instagram text-white"></i></a>
+                                            <a class="btn btn-primary btn-sm-square mb-0" href="#"><i class="fab fa-linkedin-in text-white"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-7 wow fadeInUp" data-wow-delay="0.3s">
+                                    <h4 class="mb-4">Bonjour, je suis Eliaz Morvan, basé à Bordeaux</h4>
+                                    <p class="mb-4">Je suis titulaire d'un diplôme en <strong>Mathématiques Appliquées</strong> de l'<strong>INSA de Rennes</strong> 
+                                        et passionné par l'analyse de données et l'<strong>intelligence artificielle</strong>. 
+                                        Au cours de mes expériences chez <strong>Piwwop</strong> et <strong>Mobility Tech Green</strong>, 
+                                        j'ai acquis une expertise pratique en transformant des données brutes en <strong>insights exploitables</strong> pour des solutions concrètes. 
+                                        Mon parcours m'a permis de développer des compétences solides en <strong>analyse statistique</strong>, en <strong>traitement du langage naturel (NLP)</strong> et en <strong>machine learning</strong>, me permettant de créer des outils à fort impact pour divers besoins métiers.
+                                    </p>
+                                    <div class="row g-4 mb-4">
+                                        <div class="col-6">
+                                            <p><strong class="fw-bold text-dark">Téléphone :</strong> +33 750642179</p>
+                                            <p><strong class="fw-bold text-dark">Linkedin :</strong> https://www.linkedin.com/in/eliaz-morvan-6475341a3</p>
+                                            <p class="mb-0"><strong class="fw-bold text-dark">Adresse :</strong> 6 rue Carbonneau, Bordeaux, 33800</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p><strong class="fw-bold text-dark">Nationality :</strong> Bordeaux, France</p>
+                                            <p><strong class="fw-bold text-dark">Email :</strong> eliazmorvan@orange.fr</p>
+                                            <p class="mb-0"><strong class="fw-bold text-dark">Actuellement :</strong> Disponible</p>
+                                        </div>
+                                    </div>
+                                    <a href="" class="{{ url_for('static', filename='images/CV_Eliaz_Morvan.pdf') }}"> <i class="fas fa-download me-2"></i>Téléchargez mon CV</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Education Start -->
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-lg-3">
+                        <div class="education-header bg-dark h-100 pt-6 pe-6 pb-6">
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                                <p class="text-white sub-title">Education</p>
+                                <h1 class="display-6 text-white mb-0">Mes formations</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="education-content h-100 pt-6 ps-6 pb-6">
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <div class="education-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <img src="images/insa.jpg" alt="INSA Rennes Logo" class="me-3" style="width: 50px; height: auto;">
+                                            <p class="fs-5 mb-0 me-4">Institut National des Sciences Appliquées, Rennes</p>
+                                            <div>
+                                                <span class="fa fa-calendar me-1"></span> 2021 - 2024
+                                            </div>
+                                        </div>
+                                        <h4 class="mb-3">Département Mathématiques Appliquées</h4>
+                                        <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, a quasi velit sint atque non saepe quaerat ducimus, nobis error cupiditate, nisi repudiandae dignissimos magnam? Dicta ab possimus tempora nobis.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="education-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <img src="images/brno.png" alt="Brno Logo" class="me-3" style="width: 50px; height: auto;">
+                                            <p class="fs-5 mb-0 me-4">Brno University of Technology</p>
+                                            <div>
+                                                <span class="fa fa-calendar me-1"></span> 2023 - 2024
+                                            </div>
+                                        </div>
+                                        <h4 class="mb-3">Semestre d'études à l'étranger</h4>
+                                        <p class="mb-0"> Natural Language Processing, Graph Algorithms, Bayesian modelisation for AI
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="education-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.5s">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <img src="images/iutvannes.jpg" alt="IUT Vannes Logo" class="me-3" style="width: 50px; height: auto;">
+                                            <p class="fs-5 mb-0 me-4">IUT de Vannes</p>
+                                            <div>
+                                                <span class="fa fa-calendar me-1"></span> 2019 - 2021
+                                            </div>
+                                        </div>
+                                        <h4 class="mb-3">DUT Statistique et Informatique Décisionnelle (STID)</h4>
+                                        <p class="mb-0"> Formation spécialisée en analyse de données et informatique décisionnelle, offrant une double compétence en statistique appliquée et data science.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Education End -->
+
+        <!-- Experience Start -->
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-lg-3">
+                        <div class="experience-header bg-dark h-100 pt-6 pe-6 pb-6">
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                                <p class="text-white sub-title">Experience</p>
+                                <h1 class="display-6 text-white mb-0">Mes expériences</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="experience-content h-100 pt-6 ps-6 pb-6">
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <div class="experience-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <img src="images/piwwop.png" alt="Piwwop Logo" class="me-3" style="width: 50px; height: auto;">
+                                            <p class="fs-5 mb-0 me-4">Piwwop</p>
+                                            <div>
+                                                <span class="fa fa-calendar me-1"></span> Février 2024 - Juillet 2024<br>(6 mois)
+                                            </div>
+                                        </div>
+                                        <h4 class="mb-3">Data Scientist</h4>
+                                        <p class="mb-0">Stagiaire Data Scientist au sein de Piwwop, société de services en mathématiques appliquées.</p>
+                                        <p>Conception et développement d’un système de synthétisation d’annonces légales à l’aide de
+                                            modèles d'IA générative (GPT-like) pour un client du secteur éditorial. Optimisation des
+                                            premiers résultats par annotation. </p>
+                                        <p>Conception et développement d’un service de rédaction automatique d'articles de presse par
+                                            IA générative, intégré au site interne du client, garantissant une production de contenu
+                                            cohérente, fluide et automatisée.</p>
+                                        <p>Programmation en R dans un environnement virtuel Linux, gestion des dépendances et des
+                                            environnements avec Docker et Portainer. Création d’interfaces utilisateurs interactives en Shiny
+                                            pour les clients.</p>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="experience-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <img src="images/mtg.png" alt="MTG Logo" class="me-3" style="width: 50px; height: auto;">
+                                            <p class="fs-5 mb-0 me-4">Mobility Tech Green</p>
+                                            <div>
+                                                <span class="fa fa-calendar me-1"></span> Mai 2023 - Août 2023 <br>(3 mois)
+                                            </div>
+                                        </div>
+                                        <h4 class="mb-3">Data Scientist</h4>
+                                        <p class="mb-0">Stagiaire Data Scientist au sein de l’équipe Data de Mobility Tech Green, leader européen de 
+                                            l’autopartage pour les entreprises et les collectivités</p>
+                                        <p> par des modèles d’apprentissage automatique (Random Forest, Lasso, Ridge...)
+                                            des différents coûts associés aux véhicules.</p>
+                                        <p>Développement d’un dashboard avec le framework Dash pour la représentation des
+                                            optimisations possibles de chaque client.</p>
+                                        <p>Développement d’un algorithme d’optimisation de taille de flotte de véhicules en autopartage
+                                            en Python.</p>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="experience-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.5s">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <img src="images/kantar.png" alt="Kantar Logo" class="me-3" style="width: 50px; height: auto;">
+                                            <p class="fs-5 mb-0 me-4">Kantar</p>
+                                            <div>
+                                                <span class="fa fa-calendar me-1"></span> Mars 2021 - Juin 2021 <br>(3 mois)
+                                            </div>
+                                        </div>
+                                        <h4 class="mb-3">Chargé de développement</h4>
+                                        <p class="mb-0">Chargé de développement au sein du département Data Management de Kantar, institut de
+                                            sondage.</p>
+                                        <p>Création d'une application R Shiny qui propose différentes analyses statistiques sur le
+                                            comportement des panelistes de Kantar. Les résultats ont permis de prendre des actions
+                                            pour améliorer le ciblage des panels et l'organisation des sondages.</p>
+                                        <p>Analyse et intégration des données sur R provenant de multiples sources des bases de
+                                            données Kantar.</p>
+                                        <p>Lancement d'études par sondage.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Exparience End -->
+
+
+        <!-- Skills Start -->
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-lg-3">
+                        <div class="skills-header h-100 bg-dark pt-6 pe-6 pb-6">
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                                <p class="text-white sub-title">Skills</p>
+                                <h1 class="display-6 text-white mb-0">Mes compétences</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="skills-content h-100 pt-6 ps-6 pb-6">
+                            <div class="row g-4">
+                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="text-primary text-center mb-3"><span class="fab fa-python fa-3x"></span></div>
+                                        <div class="counter-counting d-flex justify-content-center">
+                                            <h4 class="display-6" data-toggle="counter-up">98</h4>
+                                            <h4 class="display-6">%</h4>
+                                        </div>
+                                        <p class="mb-0">Python</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="text-primary text-center mb-3"><span class="fab fa-r-project fa-3x"></span></div>
+                                        <div class="counter-counting d-flex justify-content-center">
+                                            <h4 class="display-6" data-toggle="counter-up">95</h4>
+                                            <h4 class="display-6">%</h4>
+                                        </div>
+                                        <p class="mb-0">R</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.5s">
+                                        <div class="text-primary text-center mb-3"><span class="fas fa-database fa-3x"></span></div>
+                                        <div class="counter-counting d-flex justify-content-center">
+                                            <h4 class="display-6" data-toggle="counter-up">87</h4>
+                                            <h4 class="display-6">%</h4>
+                                        </div>
+                                        <p class="mb-0">SQL</p>
+                                    </div>
+                                </div>
+                                <!-- Bash -->
+                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="text-primary text-center mb-3"><span class="fab fa-linux fa-3x"></span></div>
+                                        <div class="counter-counting d-flex justify-content-center">
+                                            <h4 class="display-6" data-toggle="counter-up">85</h4>
+                                            <h4 class="display-6">%</h4>
+                                        </div>
+                                        <p class="mb-0">Bash/Linux</p>
+                                    </div>
+                                </div>
+                                <!-- GitHub -->
+                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="text-primary text-center mb-3"><span class="fab fa-github fa-3x"></span></div>
+                                        <div class="counter-counting d-flex justify-content-center">
+                                            <h4 class="display-6" data-toggle="counter-up">80</h4>
+                                            <h4 class="display-6">%</h4>
+                                        </div>
+                                        <p class="mb-0">GitHub</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.7s">
+                                        <div class="text-primary text-center mb-3"><span class="fab fa-microsoft fa-3x"></span></div>
+                                        <div class="counter-counting d-flex justify-content-center">
+                                            <h4 class="display-6" data-toggle="counter-up">75</h4>
+                                            <h4 class="display-6">%</h4>
+                                        </div>
+                                        <p class="mb-0">PowerBI</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="text-primary text-center mb-3"><span class="fas fa-globe fa-3x"></span></div>
+                                        <div class="counter-counting d-flex justify-content-center">
+                                            <h4 class="display-6" data-toggle="counter-up">70</h4>
+                                            <h4 class="display-6">%</h4>
+                                        </div>
+                                        <p class="mb-0">QGIS</p>
+                                    </div>
+                                </div>
+                                <!-- MATLAB -->
+                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.5s">
+                                        <div class="text-primary text-center mb-3"><span class="fab fa-matlab fa-3x"></span></div>
+                                        <div class="counter-counting d-flex justify-content-center">
+                                            <h4 class="display-6" data-toggle="counter-up">67</h4>
+                                            <h4 class="display-6">%</h4>
+                                        </div>
+                                        <p class="mb-0">MATLAB</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Skills End -->
+
+
+        <!-- Service Start -->
+        <div class="container-fluid" id="pigraService">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-lg-3">
+                        <div class="service-header h-100 bg-dark pt-6 pe-6 pb-6">
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                                <p class="text-white sub-title">Mes services</p>
+                                <h1 class="display-6 text-white mb-0">Ce que je peux faire pour vous</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="service-content h-100 pt-6 ps-6 pb-6">
+                            <div class="row g-4">
+                                <!-- Data Science Service -->
+                                <div class="col-12">
+                                    <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-xl-2">
+                                                <i class="fas fa-bezier-curve fa-3x"></i>
+                                            </div>
+                                            <div class="col-xl-3">
+                                                <a href="#" class="h4 mb-0">Data Science</a>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <p class="mb-0">Analyse avancée des données pour des insights exploitables et une prise de décision éclairée.</p>
+                                            </div>
+                                            <div class="col-xl-3">
+                                                <p><i class="fa fa-check me-2"></i> Modélisation statistique</p>
+                                                <p><i class="fa fa-check me-2"></i> Machine Learning</p>
+                                                <p class="mb-0"><i class="fa fa-check me-2"></i> Visualisation des données</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Gen AI Service -->
+                                <div class="col-12">
+                                    <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-xl-2">
+                                                <i class="fas fa-laptop-code fa-3x"></i>
+                                            </div>
+                                            <div class="col-xl-3">
+                                                <a href="#" class="h4 mb-0">Gen AI</a>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <p class="mb-0">Développement de solutions basées sur l'intelligence artificielle générative pour automatiser et améliorer les processus.</p>
+                                            </div>
+                                            <div class="col-xl-3">
+                                                <p><i class="fa fa-check me-2"></i> NLP</p>
+                                                <p><i class="fa fa-check me-2"></i> Chatbots IA</p>
+                                                <p class="mb-0"><i class="fa fa-check me-2"></i> Rédaction automatique</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Data Analyse Service -->
+                                <div class="col-12">
+                                    <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.5s">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-xl-2">
+                                                <i class="fab fa-app-store fa-3x"></i>
+                                            </div>
+                                            <div class="col-xl-3">
+                                                <a href="#" class="h4 mb-0">Data Analyse</a>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <p class="mb-0">Exploration, préparation et analyse de données pour en tirer des tendances significatives et des insights.</p>
+                                            </div>
+                                            <div class="col-xl-3">
+                                                <p><i class="fa fa-check me-2"></i> Préparation des données</p>
+                                                <p><i class="fa fa-check me-2"></i> Data Wrangling</p>
+                                                <p class="mb-0"><i class="fa fa-check me-2"></i> Exploration visuelle</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+
+
+        <!-- Portfolio Start -->
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-lg-3">
+                        <div class="portfolio-header h-100 bg-dark pt-6 pe-6 pb-6">
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                                <p class="text-white sub-title">Portfolio</p>
+                                <h1 class="display-6 text-white mb-0">Mes projets récents</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="portfolio-content h-100 pt-6 ps-6 pb-6">
+                            <!-- Projet 1: TTFL LAB -->
+                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="row g-4 align-items-center">
+                                    <div class="col-xl-6">
+                                        <!-- Lien autour du titre et description -->
+                                        <a href="https://ttfl-emal.streamlit.app" target="_blank" style="text-decoration: none; color: inherit;">
+                                            <h4 class="text-body">TTFL LAB</h4>
+                                            <h1 class="display-6 mb-0">Développement d'une app web pour un jeu de fantasy NBA</h1>
+                                        </a>
+                                    </div>
+                                    <div class="col-9 col-xl-4">
+                                        <div class="portfolio-img">
+                                            <div class="portfolio-img-inner">
+                                                <!-- Lien autour de l'image -->
+                                                <a href="https://ttfl-emal.streamlit.app" target="_blank">
+                                                    <img src="images/ttfl.png" class="img-fluid" alt="Image">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-xl-2">
+                                        <!-- Bouton de visualisation -->
+                                        <div class="view-img">
+                                            <a href="https://ttfl-emal.streamlit.app" target="_blank" class="btn btn-primary btn-lg-square"><i class="fas fa-external-link-alt"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Projet 2: Optimisation Equipes Natation -->
+                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="row g-4 align-items-center">
+                                    <div class="col-xl-6">
+                                        <!-- Lien autour du titre et description -->
+                                        <a href="https://optimnatation.streamlit.app/.com" target="_blank" style="text-decoration: none; color: inherit;">
+                                            <h4 class="text-body">Optimisation Equipes Natation</h4>
+                                            <h1 class="display-6 mb-0">Optimisation des Equipes d'un club de natation, accessible via un app web</h1>
+                                        </a>
+                                    </div>
+                                    <div class="col-9 col-xl-4">
+                                        <div class="portfolio-img">
+                                            <div class="portfolio-img-inner">
+                                                <!-- Lien autour de l'image -->
+                                                <a href="https://ton-lien-vers-l-app-natation.com" target="_blank">
+                                                    <img src="images/rennesnat.jpg" class="img-fluid" alt="Image">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-xl-2">
+                                        <!-- Bouton de visualisation -->
+                                        <div class="view-img">
+                                            <a href="https://ton-lien-vers-l-app-natation.com" target="_blank" class="btn btn-primary btn-lg-square"><i class="fas fa-external-link-alt"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio End -->
+
+        <!-- 
+        <div class="container-fluid" id="pigraBlog">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-lg-3">
+                        <div class="blog-header h-100 bg-dark pt-6 pe-6 pb-6">
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                                <p class="text-white sub-title">Blog</p>
+                                <h1 class="display-6 text-white mb-0">Recent Posts</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="blog-content h-100 pt-6 ps-6 pb-6">
+                            <div class="row g-4">
+                                <div class="col-xl-6">
+                                    <div class="blog-item wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="row g-4">
+                                            <div class="col-4">
+                                                <div class="blog-item-img bg-dark h-100">
+                                                    <a href="#">
+                                                        <img src="img/blog-1.jpg" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="h-100">
+                                                    <p class="text-body mb-3"><i class="fa fa-calendar-alt me-2"></i> November 12, 2024</p>
+                                                    <a href="#" class="d-inline-block h4 mb-4">Secrets of the Mobile Application</a>
+                                                    <div class="py-2 px-3 bg-light d-flex justify-content-between">
+                                                        <p class="mb-0 text-body">By <a href="#" class="h6">Bernard</a></p>
+                                                        <p class="mb-0 text-body">In <a href="#" class="h6">Design</a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="blog-item wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="row g-4">
+                                            <div class="col-4">
+                                                <div class="blog-item-img bg-dark h-100">
+                                                    <a href="#">
+                                                        <img src="img/blog-2.jpg" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="h-100">
+                                                    <p class="text-body mb-3"><i class="fa fa-calendar-alt me-2"></i> November 18, 2024</p>
+                                                    <a href="#" class="d-inline-block h4 mb-4">How to Create Quality Figma Design</a>
+                                                    <div class="py-2 px-3 bg-light d-flex justify-content-between">
+                                                        <p class="mb-0 text-body">By <a href="#" class="h6">Walker</a></p>
+                                                        <p class="mb-0 text-body">In <a href="#" class="h6">Media</a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="blog-item wow fadeInUp" data-wow-delay="0.5s">
+                                        <div class="row g-4">
+                                            <div class="col-4">
+                                                <div class="blog-item-img bg-dark h-100">
+                                                    <a href="#">
+                                                        <img src="img/blog-3.jpg" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="h-100">
+                                                    <p class="text-body mb-3"><i class="fa fa-calendar-alt me-2"></i> November 23, 2025</p>
+                                                    <a href="#" class="d-inline-block h4 mb-4">Tutorials for Learning Development</a>
+                                                    <div class="py-2 px-3 bg-light d-flex justify-content-between">
+                                                        <p class="mb-0 text-body">By <a href="#" class="h6">Jacob</a></p>
+                                                        <p class="mb-0 text-body">In <a href="#" class="h6">Lifestyle</a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="blog-item wow fadeInUp" data-wow-delay="0.7s">
+                                        <div class="row g-4">
+                                            <div class="col-4">
+                                                <div class="blog-item-img bg-dark h-100">
+                                                    <a href="#">
+                                                        <img src="img/blog-4.jpg" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="h-100">
+                                                    <p class="text-body mb-3"><i class="fa fa-calendar-alt me-2"></i> November 26, 2025</p>
+                                                    <a href="#" class="d-inline-block h4 mb-4">Tutorials for Learning Development</a>
+                                                    <div class="py-2 px-3 bg-light d-flex justify-content-between">
+                                                        <p class="mb-0 text-body">By <a href="#" class="h6">Perkel</a></p>
+                                                        <p class="mb-0 text-body">In <a href="#" class="h6">Design</a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 wow fadeInUp" data-wow-delay="0.9s">
+                                    <div class="blog-btn d-flex justify-content-center">
+                                        <p class="mb-0 me-2">For More Works Visit</p>
+                                        <a href="#" class="btn d-inline-block p-0">Our Blog</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->
+
+
+        <!-- 
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-lg-3">
+                        <div class="testimonial-header h-100 bg-dark pt-6 pe-6 pb-6">
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                                <p class="text-white sub-title">Témoignages</p>
+                                <h1 class="display-6 text-white mb-0">Ce que les gens en disent...</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="testimonial-content h-100 pt-6 ps-6 pb-6">
+                            <div class="testimonial-carousel owl-carousel bg-light wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="testimonial-item" data-dot="<img class='img-fluid' src='img/testimonial-img-1.jpg' alt=''>">
+                                    <div class="row gy-4 gx-2 mb-4">
+                                        <div class="col-sm-6">
+                                            <div class="d-flex justify-content-sm-end">
+                                                <div class="testimonial-inner-img border border-primary border-3 me-4" style="width: 100px; height: 100px;">
+                                                    <img src="img/testimonial-img-1.jpg" class="img-fluid" style="object-fit: cover;" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div>
+                                                <h5 class="mb-2">John Abraham</h5>
+                                                <p class="mb-0">New York, USA</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-sm-center">
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
+                                        </p>
+                                        <div class="d-flex justify-content-sm-center">
+                                            <i class="fas fa-star text-primary"></i>
+                                            <i class="fas fa-star text-primary"></i>
+                                            <i class="fas fa-star text-primary"></i>
+                                            <i class="fas fa-star text-primary"></i>
+                                            <i class="fas fa-star text-primary"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-item" data-dot="<img class='img-fluid' src='img/testimonial-img-2.jpg' alt=''>">
+                                    <div class="row gy-4 gx-2 mb-4">
+                                        <div class="col-sm-6">
+                                            <div class="d-flex justify-content-sm-end">
+                                                <div class="testimonial-inner-img border border-primary border-3 me-4" style="width: 100px; height: 100px;">
+                                                    <img src="img/testimonial-img-2.jpg" class="img-fluid" style="object-fit: cover;" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div>
+                                                <h5 class="mb-2">John Abraham</h5>
+                                                <p class="mb-0">New York, USA</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-sm-center">
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
+                                        </p>
+                                        <div class="d-flex justify-content-sm-center">
+                                            <i class="fas fa-star text-primary"></i>
+                                            <i class="fas fa-star text-primary"></i>
+                                            <i class="fas fa-star text-primary"></i>
+                                            <i class="fas fa-star text-primary"></i>
+                                            <i class="fas fa-star text-primary"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-item" data-dot="<img class='img-fluid' src='img/testimonial-img-3.jpg' alt=''>">
+                                    <div class="row gy-4 gx-2 mb-4">
+                                        <div class="col-sm-6">
+                                            <div class="d-flex justify-content-sm-end">
+                                                <div class="testimonial-inner-img border border-primary border-3 me-4" style="width: 100px; height: 100px;">
+                                                    <img src="img/testimonial-img-3.jpg" class="img-fluid" style="object-fit: cover;" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div>
+                                                <h5 class="mb-2">John Abraham</h5>
+                                                <p class="mb-0">New York, USA</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-sm-center">
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
+                                        </p>
+                                        <div class="d-flex justify-content-sm-center">
+                                            <i class="fas fa-star text-primary"></i>
+                                            <i class="fas fa-star text-primary"></i>
+                                            <i class="fas fa-star text-primary"></i>
+                                            <i class="fas fa-star text-primary"></i>
+                                            <i class="fas fa-star text-primary"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         -->
+
+        <!-- Contact Start -->
+        <div class="container-fluid" id="pigraContact">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-lg-3">
+                        <div class="contact-header h-100 bg-dark pt-6 pe-6 pb-6">
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                                <p class="text-white sub-title">Contactez-moi</p>
+                                <h1 class="display-6 text-white mb-0">Commençons un nouveau projet !</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                       <div class="contact-content h-100 pt-6 ps-6 pb-6">
+                            <div class="bg-light p-4">
+                                <div class="row g-5">
+                                    <div class="col-xl-5 wow fadeInUp" data-wow-delay="0.1s">
+                                        <p class="mb-4"> Le formulaire de contact est inactif pour le moment. </p>
+                                        <div class="d-flex mb-4">
+                                            <div class="btn-xl-square bg-primary text-white me-3">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                            </div>
+                                            <div>
+                                                <h4>Adresse</h4>
+                                                <p class="mb-0">6 rue Carbonneau, Bordeaux, France</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mb-4">
+                                            <div class="btn-xl-square bg-primary text-white me-3">
+                                                <i class="fas fa-envelope"></i>
+                                            </div>
+                                            <div>
+                                                <h4>Contactez-moi</h4>
+                                                <p class="mb-0">eliazmorvan@orange.fr</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="btn-xl-square bg-primary text-white me-3">
+                                                <i class="fa fa-phone-alt"></i>
+                                            </div>
+                                            <div>
+                                                <h4>Telephone</h4>
+                                                <p class="mb-0">(+33) 7 50 64 21 79</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-7 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div>
+                                            <form>
+                                                <div class="row g-3">
+                                                    <div class="col-lg-12 col-xl-6">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control border-0" id="name" placeholder="Your Name">
+                                                            <label for="name">Votre nom</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-xl-6">
+                                                        <div class="form-floating">
+                                                            <input type="email" class="form-control border-0" id="email" placeholder="Your Email">
+                                                            <label for="email">Votre email</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-xl-6">
+                                                        <div class="form-floating">
+                                                            <input type="phone" class="form-control border-0" id="phone" placeholder="Phone">
+                                                            <label for="phone">Votre téléphone</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-xl-6">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control border-0" id="project" placeholder="Project">
+                                                            <label for="project">Votre projet</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control border-0" id="subject" placeholder="Subject">
+                                                            <label for="subject">Sujet</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-floating">
+                                                            <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 120px"></textarea>
+                                                            <label for="message">Message</label>
+                                                        </div>
+                
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <button class="btn btn-primary w-100 py-3">Envoyer le message</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 wow fadeInUp" data-wow-delay="0.5s">
+                                        <div class="rounded">
+                                            <iframe class="rounded w-100" 
+                                            style="height: 400px;" src="https://www.google.com/maps/@44.8403913,-0.5597022,13.67z?entry=ttu&g_ep=EgoyMDI0MTExMS4wIKXMDSoASAFQAw%3D%3D" 
+                                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer bg-dark border-bottom-0">
+            <div class="container wow fadeIn" data-wow-delay="0.1s">
+                <div class="row g-0">
+                    <div class="col-12">
+                       <div class="footer-content h-100 pt-6 ps-6 pb-6">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-12 text-center">
+                                    <div class="d-flex justify-content-center">
+                                        <a class="btn btn-light btn-md-square me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-light btn-md-square me-3" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-light btn-md-square me-3" href=""><i class="fab fa-instagram"></i></a>
+                                        <a class="btn btn-light btn-md-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-body me-2"></i>www.eliazmorvan.com</a>, Tous droits réservés.</span>
+                                </div>
+                                <div class="col-12 text-center text-body">
+                                    <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                                    <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                                    <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                                    Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a>
+                                </div>
+                            </div>
+                       </div>        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+
 </html>
